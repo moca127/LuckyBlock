@@ -1,0 +1,6 @@
+name: LuckyBox
+main: kr.mocha.LuckyBox
+author: mocha
+version: 1.0-SNAPSHOT
+api: [1.0.0]
+
