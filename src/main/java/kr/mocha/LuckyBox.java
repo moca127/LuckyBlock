@@ -7,6 +7,7 @@ import cn.nukkit.Player;
 import cn.nukkit.block.Block;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
+import cn.nukkit.event.EventPriority;
 import cn.nukkit.event.block.BlockBreakEvent;
 import cn.nukkit.item.Item;
 import cn.nukkit.plugin.PluginBase;
@@ -31,7 +32,7 @@ public class LuckyBox extends PluginBase implements Listener{
         blockDB.save();
         super.onDisable();
 	}
-	@EventHandler
+	@EventHandler(priority = EventPriority.LOW)
 	public void onBrake(BlockBreakEvent event){
 		Block block = event.getBlock();
 		Item target = Item.fromString(blockDB.getString("block"));
